@@ -8,11 +8,10 @@ use App\Models\Post;
 
 class StoreController extends Controller
 {
-    public function __invoke(UpdateRequest $request)
+    public function __invoke(StoreRequest $request)
     {
         $data = $request->validated();
         Post::firstOrCreate($data);
-
        return redirect()->route('admin.post.index');
     }
 }

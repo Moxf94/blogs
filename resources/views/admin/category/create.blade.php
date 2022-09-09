@@ -34,14 +34,13 @@
                             @error('title')
                             <div class="text-danger">Это поле необходимо для заполнения</div>
                             @enderror
-                            <input type="submit" class="btn btn-primary" value="Добавить">
+                                <input type="submit" class="btn btn-primary" value="Добавить">
                         </form>
                     </div>
                     <!-- ./col -->
                 </div>
             </div>
             <!-- /.row -->
-    </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
     </div>
