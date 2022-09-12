@@ -30,7 +30,7 @@
                             @csrf
                             <div class="form-group w-25">
                                 <input type="text" class="form-control" name="title" placeholder="Название поста"
-                                value="{{ old('title') }}">
+                                       value="{{ old('title') }}">
                                 @error('title')
                                 <div class="text-danger">Это поле необходимо для заполнения</div>
                                 @enderror
@@ -53,6 +53,9 @@
                                             <span class="input-group-text">Загрузить</span>
                                         </div>
                                     </div>
+                                    @error('preview_image')
+                                    <div class="text-danger">Это поле необходимо для заполнения</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group w-50">
                                     <label for="exampleInputFile">Добавить главное изображение</label>
@@ -65,12 +68,31 @@
                                             <span class="input-group-text">Загрузить</span>
                                         </div>
                                     </div>
+                                    @error('main_image')
+                                    <div class="text-danger">Это поле необходимо для заполнения</div>
+                                    @enderror
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="Добавить">
+                            <div class="form-group w-25">
+                                <label>Выберите категорию</label>
+                                <select class="form-control" name="category_id">
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}"
+                                            {{ $category->id == old('$category_id') ? 'selected' : ''}}
+                                        >{{ $category->title }}</option>
+                                    @endforeach
+                                </select>
                             </div>
+                            <label>Тэги</label>
+                            <select class="select2" name="tag_ids[]" multiple="multiple" data-placeholder="Выберите тэги"
+                                    style="width: 100%;">
+                                @foreach($tags as $tag)
+                                    <option{{ is_array(old('tag_ids')) && in_array($tag->id, old('tag_ids')) ? ' selected' : '' }} value="{{ $tag->id }}">{{ $tag->title }}</option>
+                                @endforeach
+                            </select>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary mt-4" value="Добавить">
+                    </div>
                         </form>
                     </div>
                 </div>
