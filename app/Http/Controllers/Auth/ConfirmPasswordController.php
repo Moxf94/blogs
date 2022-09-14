@@ -14,7 +14,7 @@ class ConfirmPasswordController extends Controller
     |--------------------------------------------------------------------------
     |
     | This controller is responsible for handling password confirmations and
-    | uses a simple trait to includes the behavior. You're free to explore
+    | uses a simple trait to include the behavior. You're free to explore
     | this trait and override any functions that require customization.
     |
     */
@@ -26,7 +26,7 @@ class ConfirmPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = 'RouteServiceProvider::HOME';
 
     /**
      * Create a new controller instance.
