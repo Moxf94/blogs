@@ -22,6 +22,11 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
     Route::group(['namespace' => 'Main'], function () {
         Route::get('/', 'IndexController')->name('admin.main.index');
     });
+    Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' => ['auth', 'verified']], function () {
+        Route::group(['namespace' => 'Main'], function () {
+            Route::get('/', 'IndexController')->name('personal.main.index');
+        });
+    });
     Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function () {
         Route::get('/', 'IndexController')->name('admin.post.index');
         Route::get('/create', 'CreateController')->name('admin.post.create');
