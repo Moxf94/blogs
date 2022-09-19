@@ -5,21 +5,21 @@
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="{{ route('admin.main.index') }}" class="nav-link">
+                <a href="{{ route('personal.main.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-home"></i>
                     <p>
                         Главная страница
                     </p>
                 </a>
                 <li class="nav-item">
-                    <a href="{{ route('admin.user.index') }}" class="nav-link">
+                    <a href="{{ route('personal.liked.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-heart"></i>
                         <p>
                             Понравишвшиеся посты
                         </p>
                     </a>
                 <li class="nav-item">
-                    <a href="{{ route('admin.post.index') }}" class="nav-link">
+                    <a href="{{ route('personal.comment.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-comments"></i>
                         <p>
                             Комментарии
