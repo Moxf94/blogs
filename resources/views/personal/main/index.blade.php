@@ -27,13 +27,6 @@
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
-                        @foreach($posts as $post)
-                            <div>
-                                {{ $post->id }}
-                            </div>
-                        @endforeach
-                            @dd($post)
-
                         <div class="inner">
 
                             <h3>10</h3>
