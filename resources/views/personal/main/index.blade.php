@@ -27,11 +27,20 @@
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
+                        @foreach($posts as $post)
+                            <div>
+                                {{ $post->id }}
+                            </div>
+                        @endforeach
+                            @dd($post)
+
                         <div class="inner">
+
                             <h3>10</h3>
 
                             <p>Понравившиеся посты</p>
                         </div>
+
                         <div class="icon">
                             <i class="fas fa-heart"></i>
                         </div>
@@ -50,7 +59,7 @@
                         <div class="icon">
                             <i class="fas fa-comments"></i>
                         </div>
-                        <a href="{{ route('admin.post.index') }}" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('post.index') }}" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->

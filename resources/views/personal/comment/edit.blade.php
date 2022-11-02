@@ -34,12 +34,12 @@
                         <div class="text-danger">Это поле необходимо для заполнения</div>
                         @enderror
                         <input type="submit" class="btn btn-primary" value="Обновить">
+                        </div>
                     </form>
                 </div>
                 </div>
             </div>
             <!-- /.row -->
-        </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
 </div>

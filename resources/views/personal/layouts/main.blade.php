@@ -43,6 +43,7 @@
                 <li class="nav-item">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
+                        <a class="btn btn-primary" href="{{ route('post.index') }}" role="button">Все посты</a>
                         <input class="btn btn-outline-primary" type="submit" value="Выйти">
                     </form>
                 </li>
